@@ -4,12 +4,12 @@
    become: yes
    tasks:
    - name: Copy War file to Tomcat
-  copy:
-   src: "/var/snap/jenkins/4870/workspace/AM01/target/AM01.war"
-   dest: "/opt/tomcat/webapps/AM01.war
-   remote_src: no
+   copy:
+    src: "/var/snap/jenkins/4870/workspace/AM01/target/AM01.war"
+    dest: "/opt/tomcat/webapps/AM01.war
+    remote_src: no
    -name: Restart Tomcat
-  systemd:
-   name: tomcat
-   state: restarted
+   systemd:
+    name: tomcat
+    state: restarted
    
