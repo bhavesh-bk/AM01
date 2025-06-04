@@ -7,7 +7,14 @@
       copy:
         src: "/var/snap/jenkins/4870/workspace/AM01/target/AM01.war"
         dest: "/opt/tomcat/webapps/AM01.war"
+        owner: tomcat
+        group: tomcat
+        mode: '0644'
         remote_src: no
+
+    - name: Reload systemd to apply changes
+      command: systemctl daemon-reload
+        
 
     - name: Restart Tomcat
       systemd:
