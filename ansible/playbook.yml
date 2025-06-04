@@ -7,8 +7,8 @@
       copy:
         src: "/var/snap/jenkins/4870/workspace/AM01/target/AM01.war"
         dest: "/opt/tomcat/webapps/AM01.war"
-        owner: tomcat
-        group: tomcat
+        owner: root
+        group: root
         mode: '0644'
         remote_src: no
 
